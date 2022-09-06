@@ -20,7 +20,7 @@ const main = async () => {
   const pubnubExt = new PubNubExtension();
   await rc.installExtension(pubnubExt);
   const subInfo = await pubnubExt.subscribe(
-    ['/restapi/v1.0/account/~/extension/~/telephony/sessions'],
+    ['/restapi/v1.0/account/~/telephony/sessions'],
     event => {
       console.log(JSON.stringify(event, null, 2));
     }
